@@ -624,28 +624,27 @@
     <!-- 2️⃣ Add this script just before </body> (after the FAQ script) -->
 <script>
 document.getElementById('contactForm').addEventListener('submit', async function (e) {
-    e.preventDefault();                // stop normal page reload
+    e.preventDefault(); // Prevent default form behavior
 
-    // collect values
+    // Get input values
     const payload = {
         name:    document.getElementById('name').value.trim(),
         email:   document.getElementById('email').value.trim(),
         message: document.getElementById('message').value.trim(),
-        source:  'muro-ai.com-contact'
+        source:  'muro-ai.com-contact-form'
     };
 
-    // the four webhook endpoints
-    const hooks = [
+    // Webhook URLs
+    const webhooks = [
         'https://n8n-bopk.onrender.com/webhook/55555-muroai',
         'https://n8n-bopk.onrender.com/webhook-test/55555-muroai',
         'https://randomly-certain-coral.ngrok-free.app/webhook/55555-muroai',
         'https://randomly-certain-coral.ngrok-free.app/webhook-test/55555-muroai'
     ];
 
-    // POST to each webhook in parallel (fire-and-forget)
     try {
         await Promise.allSettled(
-            hooks.map(url =>
+            webhooks.map(url =>
                 fetch(url, {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
@@ -653,12 +652,12 @@ document.getElementById('contactForm').addEventListener('submit', async function
                 })
             )
         );
-        // simple confirmation for the visitor
-        alert('Thanks! Your message has been sent.');
+
+        alert('✅ Message sent successfully!');
         e.target.reset();
-    } catch (err) {
-        console.error('Webhook error', err);
-        alert('Sorry—something went wrong. Please email us instead.');
+    } catch (error) {
+        alert('❌ Something went wrong. Please email us directly.');
+        console.error('Webhook error:', error);
     }
 });
 </script>
