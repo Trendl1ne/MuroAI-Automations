@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muro AI - AI Automations</title>
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>tailwind.config={theme:{extend:{colors:{primary:'#3b82f6',secondary:'#10b981'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+    <style>
+        :where([class^="ri-"])::before { content: "\f3c2"; }
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .hero-gradient {
+            background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0.9) 50%, rgba(255,255,255,0) 100%);
+        }
+    </style>
+</head>
+<body class="bg-white">
+    <!-- Header -->
+    <header class="fixed top-0 left-0 w-full bg-white/90 backdrop-blur-sm z-50 shadow-sm">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="#" class="flex items-center space-x-2">
+                <img src="https://i.ibb.co/m5S3LDqM/Flat-Logo-black.png" alt="Flat-Logo-black" class="w-22 h-12">
+                <span class="text-2xl font-['Pacifico'] text-gray-900"></span>
+            </a>
+            <nav class="hidden md:flex items-center space-x-8">
+                <a href="#services" class="text-gray-700 hover:text-primary font-medium">Services</a>
+                <a href="#work" class="text-gray-700 hover:text-primary font-medium">Work</a>
+                <a href="#about" class="text-gray-700 hover:text-primary font-medium">About</a>
+                <a href="#faq" class="text-gray-700 hover:text-primary font-medium">FAQ</a>
+                <a href="#contact" class="bg-primary text-white px-5 py-2 !rounded-button font-medium hover:bg-primary/90 transition whitespace-nowrap">Get Started</a>
+            </nav>
+            <button class="md:hidden flex items-center justify-center w-10 h-10">
+                <i class="ri-menu-line text-gray-700 ri-lg"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative pt-24 pb-16 md:py-32 overflow-hidden">
+        <div style="background-image: url('https://readdy.ai/api/search-image?query=futuristic%2520technology%2520automation%2520concept%2520with%2520digital%2520connections%2520and%2520flowing%2520data%2520streams%252C%2520abstract%2520tech%2520background%2520with%2520blue%2520glowing%2520circuit%2520patterns%2520and%2520geometric%2520shapes%252C%2520clean%2520modern%2520design%2520with%2520space%2520for%2520text%2520on%2520left%2520side&width=1920&height=1080&seq=hero1&orientation=landscape');" class="absolute inset-0 bg-cover bg-center"></div>
+        <div class="hero-gradient absolute inset-0"></div>
+        <div class="container mx-auto px-4 relative">
+            <div class="max-w-2xl">
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">Automate Your Work, <span class="text-primary">Reclaim Your Time</span></h1>
+                <p class="text-lg md:text-xl text-gray-700 mb-8">Custom AI automations that eliminate repetitive tasks and streamline your workflows. Focus on what matters while AI handles the rest.</p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="#contact" class="bg-primary text-white px-6 py-3 !rounded-button font-medium hover:bg-primary/90 transition text-center whitespace-nowrap">Schedule Free Consultation</a>
+                    <a href="#work" class="border border-gray-300 bg-white text-gray-700 px-6 py-3 !rounded-button font-medium hover:bg-gray-50 transition text-center whitespace-nowrap">See Our Work</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pain Points Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Common Challenges We Solve</h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">Businesses and individuals face these time-consuming tasks daily. Our custom AI automations eliminate these pain points.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                    <div class="w-14 h-14 bg-blue-100 rounded-full flex items-center justify-center mb-6">
+                        <i class="ri-database-2-line text-primary ri-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Data Entry & Processing</h3>
+                    <p class="text-gray-600">Manual data entry is tedious and error-prone. Our automations extract, transform, and load data accurately at scale.</p>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                    <div class="w-14 h-14 bg-green-100 rounded-full flex items-center justify-center mb-6">
+                        <i class="ri-customer-service-2-line text-secondary ri-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Lead Generation & Outreach</h3>
+                    <p class="text-gray-600">Finding and contacting prospects takes hours. Our AI tools identify, verify, and engage leads automatically.</p>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                    <div class="w-14 h-14 bg-purple-100 rounded-full flex items-center justify-center mb-6">
+                        <i class="ri-file-text-line text-purple-600 ri-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Content Creation & Workflows</h3>
+                    <p class="text-gray-600">Creating consistent content is challenging. Our automations generate, optimize, and schedule content seamlessly.</p>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                    <div class="w-14 h-14 bg-amber-100 rounded-full flex items-center justify-center mb-6">
+                        <i class="ri-bar-chart-2-line text-amber-600 ri-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Reporting & Analytics</h3>
+                    <p class="text-gray-600">Compiling reports is time-consuming. Our solutions automatically gather data and generate insightful reports.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Work Showcase Section -->
+    <section id="work" class="py-20">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Our Automation Gallery</h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">Browse our collection of custom AI automations we've built for clients. Each solution is tailored to solve specific challenges.</p>
+            </div>
+            <div class="flex mb-8 justify-center">
+                <div class="inline-flex p-1 bg-gray-100 rounded-full">
+                    <button class="px-4 py-2 rounded-full bg-primary text-white whitespace-nowrap">All Projects</button>
+                    <button class="px-4 py-2 rounded-full text-gray-700 hover:bg-gray-200 whitespace-nowrap">Data Processing</button>
+                    <button class="px-4 py-2 rounded-full text-gray-700 hover:bg-gray-200 whitespace-nowrap">Lead Generation</button>
+                    <button class="px-4 py-2 rounded-full text-gray-700 hover:bg-gray-200 whitespace-nowrap">Content Automation</button>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+                    <div class="aspect-video bg-gray-100 relative">
+                        <img src="https://readdy.ai/api/search-image?query=professional%2520dashboard%2520interface%2520showing%2520data%2520extraction%2520and%2520processing%2520with%2520clean%2520modern%2520UI%252C%2520multiple%2520data%2520fields%2520being%2520automatically%2520populated%252C%2520business%2520analytics%2520visualization%252C%2520minimal%2520design%2520with%2520blue%2520accent%2520colors&width=600&height=340&seq=work1&orientation=landscape" alt="Data Extraction Automation" class="w-full h-full object-cover object-top">
+                        <div class="absolute inset-0 bg-black/60 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity hidden">
+                            <a href="#" class="bg-white text-gray-900 px-4 py-2 !rounded-button font-medium flex items-center gap-2 whitespace-nowrap">
+                                <i class="ri-play-circle-line"></i>
+                                Watch Demo
+                            </a>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Intelligent Data Extraction</h3>
+                        <p class="text-gray-600 mb-4">Automated system that extracts data from invoices, receipts, and forms with 99.2% accuracy, saving 15+ hours weekly.</p>
+                        <div class="flex items-center text-sm text-gray-500">
+                            <span class="flex items-center">
+                                <i class="ri-time-line mr-1"></i>
+                                
+                            </span>
+                            <span class="mx-2">•</span>
+                            <span>Data Processing</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+                    <div class="aspect-video bg-gray-100 relative">
+                        <img src="https://readdy.ai/api/search-image?query=professional%2520email%2520outreach%2520automation%2520interface%2520with%2520contact%2520lists%2520and%2520message%2520templates%252C%2520showing%2520automated%2520follow-ups%2520and%2520response%2520tracking%252C%2520clean%2520modern%2520UI%2520with%2520green%2520accent%2520colors%252C%2520business%2520communication%2520dashboard&width=600&height=340&seq=work2&orientation=landscape" alt="Email Outreach Automation" class="w-full h-full object-cover object-top">
+                        <div class="absolute inset-0 bg-black/60 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity hidden">
+                            <a href="#" class="bg-white text-gray-900 px-4 py-2 !rounded-button font-medium flex items-center gap-2 whitespace-nowrap">
+                                <i class="ri-play-circle-line"></i>
+                                Watch Demo
+                            </a>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Smart Lead Generation & Outreach</h3>
+                        <p class="text-gray-600 mb-4">AI-powered system that identifies qualified leads, personalizes outreach, and manages follow-ups automatically.</p>
+                        <div class="flex items-center text-sm text-gray-500">
+                            <span class="flex items-center">
+                                <i class="ri-time-line mr-1"></i>
+                                
+                            </span>
+                            <span class="mx-2">•</span>
+                            <span>Lead Generation</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+                    <div class="aspect-video bg-gray-100 relative">
+                        <img src="https://readdy.ai/api/search-image?query=content%2520creation%2520dashboard%2520showing%2520automated%2520blog%2520post%2520generation%2520with%2520SEO%2520optimization%252C%2520social%2520media%2520scheduling%2520calendar%252C%2520analytics%2520metrics%252C%2520clean%2520modern%2520UI%2520with%2520purple%2520accent%2520colors%252C%2520professional%2520content%2520marketing%2520interface&width=600&height=340&seq=work3&orientation=landscape" alt="Content Automation" class="w-full h-full object-cover object-top">
+                        <div class="absolute inset-0 bg-black/60 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity hidden">
+                            <a href="#" class="bg-white text-gray-900 px-4 py-2 !rounded-button font-medium flex items-center gap-2 whitespace-nowrap">
+                                <i class="ri-play-circle-line"></i>
+                                Watch Demo
+                            </a>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Content Creation Pipeline</h3>
+                        <p class="text-gray-600 mb-4">End-to-end automation that researches topics, generates SEO-optimized content, and schedules publication across channels.</p>
+                        <div class="flex items-center text-sm text-gray-500">
+                            <span class="flex items-center">
+                                <i class="ri-time-line mr-1"></i>
+                                
+                            </span>
+                            <span class="mx-2">•</span>
+                            <span>Content Automation</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+                    <div class="aspect-video bg-gray-100 relative">
+                        <img src="https://readdy.ai/api/search-image?query=financial%2520reporting%2520dashboard%2520with%2520automated%2520data%2520visualization%252C%2520charts%2520and%2520graphs%2520showing%2520business%2520metrics%252C%2520clean%2520modern%2520UI%2520with%2520amber%2520accent%2520colors%252C%2520professional%2520analytics%2520interface%2520with%2520KPI%2520tracking&width=600&height=340&seq=work4&orientation=landscape" alt="Financial Reporting Automation" class="w-full h-full object-cover object-top">
+                        <div class="absolute inset-0 bg-black/60 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity hidden">
+                            <a href="#" class="bg-white text-gray-900 px-4 py-2 !rounded-button font-medium flex items-center gap-2 whitespace-nowrap">
+                                <i class="ri-play-circle-line"></i>
+                                Watch Demo
+                            </a>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Financial Reporting Automation</h3>
+                        <p class="text-gray-600 mb-4">System that collects data from multiple sources, generates comprehensive financial reports, and delivers insights automatically.</p>
+                        <div class="flex items-center text-sm text-gray-500">
+                            <span class="flex items-center">
+                                <i class="ri-time-line mr-1"></i>
+                                
+                            </span>
+                            <span class="mx-2">•</span>
+                            <span>Reporting</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+                    <div class="aspect-video bg-gray-100 relative">
+                        <img src="https://readdy.ai/api/search-image?query=customer%2520support%2520automation%2520dashboard%2520showing%2520AI%2520chatbot%2520interface%252C%2520ticket%2520categorization%2520and%2520routing%252C%2520response%2520templates%252C%2520clean%2520modern%2520UI%2520with%2520blue%2520accent%2520colors%252C%2520professional%2520help%2520desk%2520system&width=600&height=340&seq=work5&orientation=landscape" alt="Customer Support Automation" class="w-full h-full object-cover object-top">
+                        <div class="absolute inset-0 bg-black/60 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity hidden">
+                            <a href="#" class="bg-white text-gray-900 px-4 py-2 !rounded-button font-medium flex items-center gap-2 whitespace-nowrap">
+                                <i class="ri-play-circle-line"></i>
+                                Watch Demo
+                            </a>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Customer Support Assistant</h3>
+                        <p class="text-gray-600 mb-4">AI-powered system that categorizes support tickets, drafts personalized responses, and resolves common issues automatically.</p>
+                        <div class="flex items-center text-sm text-gray-500">
+                            <span class="flex items-center">
+                                <i class="ri-time-line mr-1"></i>
+                                
+                            </span>
+                            <span class="mx-2">•</span>
+                            <span>Customer Service</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+                    <div class="aspect-video bg-gray-100 relative">
+                        <img src="https://readdy.ai/api/search-image?query=social%2520media%2520management%2520dashboard%2520with%2520automated%2520content%2520scheduling%252C%2520engagement%2520tracking%252C%2520and%2520performance%2520analytics%252C%2520clean%2520modern%2520UI%2520with%2520green%2520accent%2520colors%252C%2520professional%2520marketing%2520interface&width=600&height=340&seq=work6&orientation=landscape" alt="Social Media Automation" class="w-full h-full object-cover object-top">
+                        <div class="absolute inset-0 bg-black/60 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity hidden">
+                            <a href="#" class="bg-white text-gray-900 px-4 py-2 !rounded-button font-medium flex items-center gap-2 whitespace-nowrap">
+                                <i class="ri-play-circle-line"></i>
+                                Watch Demo
+                            </a>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Social Media Manager</h3>
+                        <p class="text-gray-600 mb-4">Complete automation that generates content ideas, creates posts with visuals, schedules publishing, and engages with followers.</p>
+                        <div class="flex items-center text-sm text-gray-500">
+                            <span class="flex items-center">
+                                <i class="ri-time-line mr-1"></i>
+                                
+                            </span>
+                            <span class="mx-2">•</span>
+                            <span>Content Automation</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-12">
+                <a href="#contact" class="inline-flex items-center text-primary font-medium hover:underline">
+                    Have a custom project in mind?
+                    <i class="ri-arrow-right-line ml-1"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">How It Works</h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">Our streamlined process makes it easy to get started with custom AI automations that save you time and effort.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <div class="bg-white p-8 rounded-lg shadow-sm relative">
+                    <div class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center text-xl font-bold mb-6 absolute -top-6 left-8">1</div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3 mt-4">Discovery Call</h3>
+                    <p class="text-gray-600">We discuss your challenges, identify repetitive tasks, and determine which processes can be automated for maximum impact.</p>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-sm relative">
+                    <div class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center text-xl font-bold mb-6 absolute -top-6 left-8">2</div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3 mt-4">Custom Solution Design</h3>
+                    <p class="text-gray-600">We design a tailored automation solution that integrates with your existing tools and workflows for seamless implementation.</p>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-sm relative">
+                    <div class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center text-xl font-bold mb-6 absolute -top-6 left-8">3</div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3 mt-4">Build & Implementation</h3>
+                    <p class="text-gray-600">We develop, test, and deploy your custom automation, providing training and support to ensure you get maximum value.</p>
+                </div>
+            </div>
+            <div class="text-center mt-12">
+                <a href="#contact" class="bg-primary text-white px-6 py-3 !rounded-button font-medium hover:bg-primary/90 transition inline-block whitespace-nowrap">Start Your Automation Journey</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section 
+    <section class="py-20">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">What Our Clients Say</h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">Hear from businesses and individuals who have reclaimed their time with our custom AI automations.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-lg shadow-sm">
+                    <div class="flex text-amber-400 mb-4">
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                    </div>
+                    <p class="text-gray-700 mb-6">"Muro's data extraction automation has been a game-changer for our accounting team. What used to take 20+ hours per week now happens automatically with better accuracy than our manual process."</p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center mr-4">
+                            <i class="ri-user-3-line text-gray-500"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-gray-900">Rebecca Thompson</h4>
+                            <p class="text-gray-500 text-sm">CFO, Meridian Solutions</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-sm">
+                    <div class="flex text-amber-400 mb-4">
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                    </div>
+                    <p class="text-gray-700 mb-6">"The lead generation automation Muro built for us has transformed our sales process. We're now connecting with 3x more qualified prospects while our team spends less time on research and outreach."</p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center mr-4">
+                            <i class="ri-user-3-line text-gray-500"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-gray-900">Michael Donovan</h4>
+                            <p class="text-gray-500 text-sm">Sales Director, TechGrowth</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-sm">
+                    <div class="flex text-amber-400 mb-4">
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                    </div>
+                    <p class="text-gray-700 mb-6">"As a solo entrepreneur, I was drowning in content creation tasks. Muro's automation now handles my entire content pipeline from research to publishing, saving me 15+ hours weekly."</p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center mr-4">
+                            <i class="ri-user-3-line text-gray-500"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-gray-900">Jennifer Martinez</h4>
+                            <p class="text-gray-500 text-sm">Founder, Growth Mindset Coaching</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col lg:flex-row items-center gap-12">
+                <div class="lg:w-1/3">
+                    <img src="https://i.ibb.co/B5cGpSQJ/Founder.png" alt="Founder" class="w-full max-w-md mx-auto rounded-lg shadow-md">
+                </div>
+                <div class="lg:w-2/3">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">About Muro</h2>
+                    <p class="text-lg text-gray-700 mb-6">Hi, I’m Gyunay “Muro” Aliev. After years running service businesses, I realised the real growth lever isn’t longer hours - it’s smart automation. For the last year I’ve been architecting no-code, AI-powered workflows that removed data entry, sped up lead response, and auto-generated content in my own ventures.</p>
+                    <p class="text-lg text-gray-700 mb-6">Now I deliver the same wins for other teams. My approach is simple: start with a tiny pilot, measure the hours or pounds saved, then scale only what works. Everything is documented and built on mainstream tools like n8n, Make, Zapier, GPT APIs and other integrations - so you’re never locked in.</p>
+                    <p class="text-lg text-gray-700 mb-6">Every automation I build is tailored to your specific needs, integrating seamlessly with your existing tools and processes. The result? You and your team can focus on creative, strategic work while AI handles the rest.</p>
+                    <div class="flex flex-wrap gap-4">
+                        <div class="flex items-center gap-2 bg-white px-4 py-2 rounded-lg shadow-sm">
+                            <i class="ri-check-line text-primary"></i>
+                            <span class="font-medium">2+ Years Experience</span>
+                        </div>
+                        <div class="flex items-center gap-2 bg-white px-4 py-2 rounded-lg shadow-sm">
+                            <i class="ri-check-line text-primary"></i>
+                            <span class="font-medium">100+ Automations Built</span>
+                        </div>
+                        <div class="flex items-center gap-2 bg-white px-4 py-2 rounded-lg shadow-sm">
+                            <i class="ri-check-line text-primary"></i>
+                            <span class="font-medium">5000+ Hours Saved</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+=====  End Testimonials  ===== -->
+    <!-- FAQ Section -->
+    <section id="faq" class="py-20">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">Get answers to common questions about our AI automation services.</p>
+            </div>
+            <div class="max-w-3xl mx-auto">
+                <div class="mb-6">
+                    <button class="flex justify-between items-center w-full text-left p-6 bg-white rounded-lg shadow-sm" id="faq-1-btn">
+                        <span class="text-xl font-semibold text-gray-900">How long does it take to build a custom automation?</span>
+                        <i class="ri-arrow-down-s-line text-gray-500 ri-lg"></i>
+                    </button>
+                    <div class="hidden bg-white px-6 pb-6 rounded-b-lg shadow-sm -mt-1" id="faq-1-content">
+                        <p class="text-gray-700">Most automations take 1-3 weeks to build, depending on complexity. Simple data extraction or content generation workflows can be completed in as little as 5-7 days, while more complex systems integrating multiple tools might take 2-3 weeks. During our discovery call, we'll provide a specific timeline for your project.</p>
+                    </div>
+                </div>
+                <div class="mb-6">
+                    <button class="flex justify-between items-center w-full text-left p-6 bg-white rounded-lg shadow-sm" id="faq-2-btn">
+                        <span class="text-xl font-semibold text-gray-900">How do you ensure data security and privacy?</span>
+                        <i class="ri-arrow-down-s-line text-gray-500 ri-lg"></i>
+                    </button>
+                    <div class="hidden bg-white px-6 pb-6 rounded-b-lg shadow-sm -mt-1" id="faq-2-content">
+                        <p class="text-gray-700">We take data security extremely seriously. All automations are built with privacy-by-design principles, using encrypted connections and secure authentication methods. We don't store your data unless specifically required for the automation, and when we do, it's always encrypted. We're also happy to sign NDAs and comply with your organization's security requirements.</p>
+                    </div>
+                </div>
+                <div class="mb-6">
+                    <button class="flex justify-between items-center w-full text-left p-6 bg-white rounded-lg shadow-sm" id="faq-3-btn">
+                        <span class="text-xl font-semibold text-gray-900">What tools and platforms can you integrate with?</span>
+                        <i class="ri-arrow-down-s-line text-gray-500 ri-lg"></i>
+                    </button>
+                    <div class="hidden bg-white px-6 pb-6 rounded-b-lg shadow-sm -mt-1" id="faq-3-content">
+                        <p class="text-gray-700">We can integrate with virtually any modern software that offers an API, including popular tools like Google Workspace, Microsoft 365, Salesforce, HubSpot, Asana, Trello, Slack, Zapier, Airtable, QuickBooks, and many more. If you're using custom or legacy systems, we can often build custom connectors to integrate with those as well.</p>
+                    </div>
+                </div>
+                <div class="mb-6">
+                    <button class="flex justify-between items-center w-full text-left p-6 bg-white rounded-lg shadow-sm" id="faq-4-btn">
+                        <span class="text-xl font-semibold text-gray-900">How much does a custom automation cost?</span>
+                        <i class="ri-arrow-down-s-line text-gray-500 ri-lg"></i>
+                    </button>
+                    <div class="hidden bg-white px-6 pb-6 rounded-b-lg shadow-sm -mt-1" id="faq-4-content">
+                        <p class="text-gray-700">Pricing depends on the complexity of the automation, the number of systems being integrated, and the volume of data being processed. Simple automations typically start at $1,500, while more complex enterprise solutions can range from $5,000-$15,000. We provide detailed quotes after our discovery call when we understand your specific requirements. Many clients see ROI within 1-3 months based on time saved.</p>
+                    </div>
+                </div>
+                <div class="mb-6">
+                    <button class="flex justify-between items-center w-full text-left p-6 bg-white rounded-lg shadow-sm" id="faq-5-btn">
+                        <span class="text-xl font-semibold text-gray-900">Do you provide support after the automation is built?</span>
+                        <i class="ri-arrow-down-s-line text-gray-500 ri-lg"></i>
+                    </button>
+                    <div class="hidden bg-white px-6 pb-6 rounded-b-lg shadow-sm -mt-1" id="faq-5-content">
+                        <p class="text-gray-700">Absolutely! All automations include 30 days of free support for any issues or questions. We also offer monthly maintenance plans to ensure your automations continue running smoothly as your business evolves. These plans include regular check-ins, performance optimization, and updates as needed. Many clients choose our maintenance plans for peace of mind and continuous improvement.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Ready to Reclaim Your Time?</h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">Get in touch to discuss your automation needs or schedule a free consultation.</p>
+            </div>
+            <div class="flex flex-col lg:flex-row gap-12 max-w-6xl mx-auto">
+                <div class="lg:w-1/2 bg-white p-8 rounded-lg shadow-sm">
+                    <h3 class="text-2xl font-semibold text-gray-900 mb-6">Send a Message</h3>
+                    <form>
+                        <div class="mb-6">
+                            <label for="name" class="block text-gray-700 font-medium mb-2">Name</label>
+                            <input type="text" id="name" class="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary" placeholder="Your name">
+                        </div>
+                        <div class="mb-6">
+                            <label for="email" class="block text-gray-700 font-medium mb-2">Email</label>
+                            <input type="email" id="email" class="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary" placeholder="Your email">
+                        </div>
+                        <div class="mb-6">
+                            <label for="message" class="block text-gray-700 font-medium mb-2">Message</label>
+                            <textarea id="message" rows="5" class="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary" placeholder="Tell us about your automation needs"></textarea>
+                        </div>
+                        <button type="submit" class="bg-primary text-white px-6 py-3 !rounded-button font-medium hover:bg-primary/90 transition w-full whitespace-nowrap">Send Message</button>
+                    </form>
+                </div>
+                <div class="lg:w-1/2 bg-white p-8 rounded-lg shadow-sm">
+                    <h3 class="text-2xl font-semibold text-gray-900 mb-6">Schedule a Consultation</h3>
+                    <!-- Calendly inline widget begin -->
+<div class="bg-gray-100 rounded-lg p-6 mb-8">
+    <div class="calendly-inline-widget w-full" data-url="https://calendly.com/alievgunai/30min" style="min-width:320px; height:700px;"></div>
+</div>
+<script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+<!-- Calendly inline widget end -->
+
+                    <div class="space-y-4">
+                        <div class="flex items-center gap-4">
+                            <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center">
+                                <i class="ri-mail-line text-primary"></i>
+                            </div>
+                            <div>
+                                <p class="text-gray-700 font-medium">Email</p>
+                                <a href="mailto:muroai.aliev@gmail.com" class="text-primary hover:underline">muroai.aliev@gmail.com</a>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <div class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center">
+                                <i class="ri-phone-line text-secondary"></i>
+                            </div>
+                            <div>
+                                <p class="text-gray-700 font-medium">Phone</p>
+                                <a href="tel:+447480640606" class="text-primary hover:underline">+447480640606</a>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <div class="w-10 h-10 bg-purple-100 rounded-full flex items-center justify-center">
+                                <i class="ri-time-line text-purple-600"></i>
+                            </div>
+                            <div>
+                                <p class="text-gray-700 font-medium">Office Hours</p>
+                                <p class="text-gray-600">Monday - Friday, 11am - 5pm GMT</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center mb-8">
+                <div class="flex items-center space-x-2 mb-6 md:mb-0">
+                    <img src="https://i.ibb.co/ksJnQRJW/Flat-Logo-white.png" alt="Flat-Logo-white" class="w-22 h-12">
+                    <span class="text-2xl font-['Pacifico']"></span>
+                </div>
+                <div class="flex space-x-4">
+                    <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary transition">
+                        <i class="ri-linkedin-fill"></i>
+                    </a>
+                    <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary transition">
+                        <i class="ri-twitter-x-fill"></i>
+                    </a>
+                    <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary transition">
+                        <i class="ri-github-fill"></i>
+                    </a>
+                    <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary transition">
+                        <i class="ri-youtube-fill"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8">
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                    <div>
+                        <h4 class="text-lg font-semibold mb-4">About</h4>
+                        <p class="text-gray-400 mb-4">Muro AI helps businesses and individuals reclaim their time through custom AI automations that eliminate repetitive tasks.</p>
+                        <p class="text-gray-400">Based in London, UK</p>
+                    </div>
+                    <div>
+                        <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                        <ul class="space-y-2">
+                            <li><a href="#" class="text-gray-400 hover:text-white transition">Home</a></li>
+                            <li><a href="#services" class="text-gray-400 hover:text-white transition">Services</a></li>
+                            <li><a href="#work" class="text-gray-400 hover:text-white transition">Work</a></li>
+                            <li><a href="#about" class="text-gray-400 hover:text-white transition">About</a></li>
+                            <li><a href="#contact" class="text-gray-400 hover:text-white transition">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-lg font-semibold mb-4">Services</h4>
+                        <ul class="space-y-2">
+                            <li><a href="#" class="text-gray-400 hover:text-white transition">Data Automation</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white transition">Lead Generation</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white transition">Content Creation</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white transition">Reporting</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white transition">Custom Solutions</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-lg font-semibold mb-4">Contact</h4>
+                        <ul class="space-y-2">
+                            <li class="flex items-center gap-2">
+                                <i class="ri-mail-line"></i>
+                                <a href="mailto:muroai.aliev@gmail.com" class="text-gray-400 hover:text-white transition">muroai.aliev@gmail.com</a>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i class="ri-phone-line"></i>
+                                <a href="tel:+447480640606" class="text-gray-400 hover:text-white transition">+447480640606</a>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i class="ri-map-pin-line"></i>
+                                <span class="text-gray-400">London, UK</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 text-sm mb-4 md:mb-0">&copy; 2025 Muro AI. All rights reserved.</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white text-sm transition">Privacy Policy</a>
+                    <a href="#" class="text-gray-400 hover:text-white text-sm transition">Terms of Service</a>
+                    <a href="#" class="text-gray-400 hover:text-white text-sm transition">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script id="faq-accordion">
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqButtons = document.querySelectorAll('[id^="faq-"][id$="-btn"]');
+            
+            faqButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const contentId = this.id.replace('-btn', '-content');
+                    const content = document.getElementById(contentId);
+                    const icon = this.querySelector('i');
+                    
+                    if (content.classList.contains('hidden')) {
+                        content.classList.remove('hidden');
+                        icon.classList.remove('ri-arrow-down-s-line');
+                        icon.classList.add('ri-arrow-up-s-line');
+                    } else {
+                        content.classList.add('hidden');
+                        icon.classList.remove('ri-arrow-up-s-line');
+                        icon.classList.add('ri-arrow-down-s-line');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
