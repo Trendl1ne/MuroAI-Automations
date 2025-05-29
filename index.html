@@ -12,6 +12,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
     <style>
+        .nav-link     { @apply text-gray-700 hover:text-primary font-medium; }
+.mobile-link  { @apply font-medium text-gray-700 hover:text-primary; }
+
         :where([class^="ri-"])::before { content: "\f3c2"; }
         body {
             font-family: 'Inter', sans-serif;
@@ -24,29 +27,47 @@
 <body class="bg-white overflow-x-hidden">
     <!-- Header -->
     <header class="fixed top-0 left-0 w-full bg-white/90 backdrop-blur-sm z-50 shadow-sm">
-        <div class="mx-auto max-w-screen-lg px-4 py-4 flex justify-between items-center overflow-x-hidden">
-            <a href="#" class="flex items-center space-x-2">
-                <img src="https://i.ibb.co/m5S3LDqM/Flat-Logo-black.png" alt="Flat-Logo-black" class="h-10 w-auto max-w-[140px]">
-                <span class="text-2xl font-['Pacifico'] text-gray-900"></span>
-            </a>
-            <nav class="hidden md:flex items-center space-x-8">
-                <a href="#services" class="text-gray-700 hover:text-primary font-medium">Services</a>
-                <a href="#work" class="text-gray-700 hover:text-primary font-medium">Work</a>
-                <a href="#about" class="text-gray-700 hover:text-primary font-medium">About</a>
-                <a href="#faq" class="text-gray-700 hover:text-primary font-medium">FAQ</a>
-                <a href="#contact" class="bg-primary text-white px-5 py-2 !rounded-button font-medium hover:bg-primary/90 transition whitespace-nowrap">Get Started</a>
-            </nav>
-            <button class="md:hidden flex items-center justify-center w-10 h-10">
-                <i class="ri-menu-line text-gray-700 ri-lg"></i>
-            </button>
-        </div>
-    </header>
+  <div class="mx-auto max-w-screen-xl px-4 py-4 flex justify-between items-center">
+    <!-- logo -->
+    <a href="#" class="flex items-center gap-2">
+      <img src="https://i.ibb.co/m5S3LDqM/Flat-Logo-black.png"
+           alt="Muro AI"
+           class="h-10 w-auto"/>
+      <span class="font-['Pacifico'] text-xl text-gray-900">Muro AI</span>
+    </a>
+
+    <!-- desktop nav -->
+    <nav class="hidden md:flex items-center space-x-8">
+      <a href="#services" class="nav-link">Services</a>
+      <a href="#work"      class="nav-link">Work</a>
+      <a href="#about"     class="nav-link">About</a>
+      <a href="#faq"       class="nav-link">FAQ</a>
+      <a href="#contact"   class="bg-primary text-white px-5 py-2 rounded-button font-medium hover:bg-primary/90">Get Started</a>
+    </nav>
+
+    <!-- burger -->
+    <button id="menuBtn" class="md:hidden w-10 h-10 flex items-center justify-center">
+      <i class="ri-menu-line ri-lg text-gray-700"></i>
+    </button>
+  </div>
+
+  <!-- mobile menu -->
+  <nav id="mobileMenu"
+       class="md:hidden fixed inset-x-0 top-16 bg-white shadow-xl border-t border-gray-100
+              flex flex-col items-center gap-6 py-6 transform -translate-y-full transition-transform">
+    <a href="#services" class="mobile-link">Services</a>
+    <a href="#work"      class="mobile-link">Work</a>
+    <a href="#about"     class="mobile-link">About</a>
+    <a href="#faq"       class="mobile-link">FAQ</a>
+    <a href="#contact"   class="mobile-link bg-primary text-white px-6 py-2 rounded-button">Get Started</a>
+  </nav>
+</header>
 
     <!-- Hero Section -->
     <section class="relative pt-24 pb-16 md:py-32 overflow-hidden">
         <div style="background-image: url('https://readdy.ai/api/search-image?query=futuristic%2520technology%2520automation%2520concept%2520with%2520digital%2520connections%2520and%2520flowing%2520data%2520streams%252C%2520abstract%2520tech%2520background%2520with%2520blue%2520glowing%2520circuit%2520patterns%2520and%2520geometric%2520shapes%252C%2520clean%2520modern%2520design%2520with%2520space%2520for%2520text%2520on%2520left%2520side&width=1920&height=1080&seq=hero1&orientation=landscape');" class="absolute inset-0 bg-cover bg-center"></div>
         <div class="hero-gradient absolute inset-0"></div>
-        <div class="container mx-auto px-4 relative">
+        <div class="mx-auto max-w-screen-xl px-4 relative">
             <div class="max-w-2xl">
                 <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">Automate Your Work, <span class="text-primary">Reclaim Your Time</span></h1>
                 <p class="text-lg md:text-xl text-gray-700 mb-8">Custom AI automations that eliminate repetitive tasks and streamline your workflows. Focus on what matters while AI handles the rest.</p>
@@ -682,5 +703,14 @@ document.getElementById('contactForm').addEventListener('submit', async function
     }
 });
 </script>
+<script>
+const btn  = document.getElementById('menuBtn');
+const menu = document.getElementById('mobileMenu');
+
+btn.addEventListener('click', () => {
+  menu.classList.toggle('-translate-y-full');   // slide down / up
+});
+</script>
+
 </body>
 </html>
