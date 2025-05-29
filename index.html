@@ -33,12 +33,12 @@
       <img src="https://i.ibb.co/m5S3LDqM/Flat-Logo-black.png"
            alt="Muro AI"
            class="h-10 w-auto"/>
-      <span class="font-['Pacifico'] text-xl text-gray-900">Muro AI</span>
+      <span class="font-['Pacifico'] text-xl text-gray-900"></span>
     </a>
 
     <!-- desktop nav -->
     <nav class="hidden md:flex items-center space-x-8">
-      <a href="#services" class="nav-link">Services</a>
+      <a href="#work" class="nav-link">Services</a>
       <a href="#work"      class="nav-link">Work</a>
       <a href="#about"     class="nav-link">About</a>
       <a href="#faq"       class="nav-link">FAQ</a>
@@ -53,9 +53,9 @@
 
   <!-- mobile menu -->
   <nav id="mobileMenu"
-       class="md:hidden fixed inset-x-0 top-16 bg-white shadow-xl border-t border-gray-100
-              flex flex-col items-center gap-6 py-6 transform -translate-y-full transition-transform">
-    <a href="#services" class="mobile-link">Services</a>
+       class="md:hidden hidden absolute inset-x-0 top-full bg-white shadow-xl border-t border-gray-100
+            flex flex-col items-center gap-6 py-6">
+    <a href="#work" class="mobile-link">Services</a>
     <a href="#work"      class="mobile-link">Work</a>
     <a href="#about"     class="mobile-link">About</a>
     <a href="#faq"       class="mobile-link">FAQ</a>
@@ -706,11 +706,13 @@ document.getElementById('contactForm').addEventListener('submit', async function
 <script>
 const btn  = document.getElementById('menuBtn');
 const menu = document.getElementById('mobileMenu');
+const icon = btn.firstElementChild;              // the <i> inside the button
 
 btn.addEventListener('click', () => {
-  menu.classList.toggle('-translate-y-full');   // slide down / up
+  menu.classList.toggle('hidden');               // show / hide menu
+  icon.classList.toggle('ri-menu-line');         // swap burger ↔ close
+  icon.classList.toggle('ri-close-line');
 });
 </script>
-
 </body>
 </html>
